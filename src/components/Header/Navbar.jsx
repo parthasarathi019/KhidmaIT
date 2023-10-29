@@ -98,6 +98,7 @@ const Navbar = () => {
               >
                 <NavLink
                   to={item.path}
+                  onClick={toggleNav}
                   className={({ isActive }) =>
                     isActive ? "active dot" : "inActive"
                   }
@@ -108,6 +109,7 @@ const Navbar = () => {
                 <div className="hidden group-hover:block absolute top-5 left-0 bg-white  rounded-md z-10 space-y-3  translate-y-3 transition-all opacity-0 group-hover:translate-y-0 group-hover:opacity-100 drop-shadow-md">
                   {item?.submenu?.map((menu) => (
                     <Link
+                      onClick={toggleNav}
                       to={menu.path}
                       key={menu.id}
                       className="px-6 last:pb-6 first:pt-5 flex flex-col w-max text-zinc-500 font-medium capitalize hover:text-btnBg"
@@ -149,6 +151,7 @@ const Navbar = () => {
               className="list-none relative group w-max mx-auto"
             >
               <NavLink
+                onClick={toggleNav}
                 to={item.path}
                 className="uppercase text-white font-semibold hover:text-white"
               >
@@ -160,6 +163,7 @@ const Navbar = () => {
                   <Link
                     to={menu.path}
                     key={menu.id}
+                    onClick={toggleNav}
                     className="text-sm px-6 last:pb-6 first:pt-5 flex flex-col w-max text-zinc-50 transition-all font-medium capitalize hover:text-btnBg "
                   >
                     {menu.name}
