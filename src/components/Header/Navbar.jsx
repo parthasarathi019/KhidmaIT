@@ -132,7 +132,7 @@ const Navbar = () => {
       {/* MOBILE MENU  */}
 
       <div
-        className={`block sm:hidden bg-black/90 fixed z-50 top-0 right-0 max-w-screen-sm w-full pb-4 text-center h-screen space-y-3  transition-all ${
+        className={`block sm:hidden bg-black/90 fixed z-50 top-0 right-0 max-w-screen-sm w-full pb-4 text-center h-screen space-y-3  transition-all backdrop-blur-md ${
           showNav ? "translate-x-0" : "translate-x-[120%]"
         }`}
       >
@@ -155,7 +155,7 @@ const Navbar = () => {
                 {item.name}
               </NavLink>
 
-              <div className="absolute top-0 -right-[11rem] bg-navBg rounded-md z-10 space-y-3  translate-y-3 transition-all opacity-0 group-hover:translate-y-0 group-hover:opacity-100 drop-shadow-md  ">
+              <div className="absolute top-0 -right-[11rem] bg-navBg border border-zinc-700 rounded-md z-10 space-y-3  translate-y-3 transition-all opacity-0 group-hover:translate-y-0 group-hover:opacity-100 drop-shadow-md  ">
                 {item?.submenu?.map((menu) => (
                   <Link
                     to={menu.path}
