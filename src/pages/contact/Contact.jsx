@@ -7,9 +7,6 @@ const Contact = () => {
       <div className="my-container">
         <div>
           <SectionTitle text={"get in touch"} />
-          <div className="hidden md:block">
-            <hr className="my-2 w-[85%] border-t-[1.32px] border-green-500" />
-          </div>
         </div>
         <div className="flex flex-col-reverse md:flex-row gap-x-3 md:pt-10 pt-6">
           <div className="grid md:grid-cols-2 gap-10 md:flex-row">
