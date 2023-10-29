@@ -1,4 +1,3 @@
-import { Fade } from "react-awesome-reveal";
 import SectionTitle from "../shared/SectionTitle";
 
 const Contact = () => {
