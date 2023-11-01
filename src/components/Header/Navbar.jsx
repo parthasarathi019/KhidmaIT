@@ -45,7 +45,7 @@ const Navbar = () => {
     {
       id: 2,
       name: "services",
-      path: "/web-development",
+
       submenu: [
         {
           id: 11,
@@ -83,9 +83,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="bg-navBg py-3 sticky top-0 left-0 w-full z-30">
-        <div
-          className="my-container flex justify-between items-center px-2"
-        >
+        <div className="my-container flex justify-between items-center px-2">
           <div>
             <img src={second} alt="" />
           </div>
