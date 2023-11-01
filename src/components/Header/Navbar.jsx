@@ -84,7 +84,6 @@ const Navbar = () => {
     <>
       <nav className="bg-navBg py-3 sticky top-0 left-0 w-full z-30">
         <div
-          data-aos="zoom-out"
           className="my-container flex justify-between items-center px-2"
         >
           <div>
@@ -106,7 +105,7 @@ const Navbar = () => {
                   {item.name}
                 </NavLink>
 
-                <div className="hidden group-hover:block absolute top-5 left-0 bg-white  rounded-md z-10 space-y-3  translate-y-3 transition-all opacity-0 group-hover:translate-y-0 group-hover:opacity-100 drop-shadow-md">
+                <div className="hidden group-hover:block absolute top-[25px] left-0 bg-white  rounded-md z-10 space-y-3  translate-y-3 transition-all opacity-0 group-hover:translate-y-0 group-hover:opacity-100 drop-shadow-md">
                   {item?.submenu?.map((menu) => (
                     <Link
                       onClick={toggleNav}

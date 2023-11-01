@@ -10,7 +10,7 @@ const ServiceCard = ({ service, order }) => {
                 <p>{service.description}</p>
             </div>
             <div>
-                <img src={service.image} alt="Service Image" className="w-full" />
+                <img src={service.image} alt="Service Image" className="w-[418px] h-[403px]" />
             </div>
         </div>
     )

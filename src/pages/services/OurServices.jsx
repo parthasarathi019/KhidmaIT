@@ -41,11 +41,11 @@ const OurServices = () => {
     <div className="py-12 bg-white]">
       <div className="px-2 my-container">
         <div className="">
-          <SectionTitle text={"our services"} number={"02"} />
+          <SectionTitle text={"our services"} number={""} />
         </div>
 
         <div className="space-y-4">
-          <p className="text-[36px] sm:text-[45px] md:text-[50px] text-center font-semibold leading-tight">
+          <p className="text-[36px] sm:text-[45px] md:text-[45px] text-center font-semibold leading-tight">
             We build software solutions that solve client's business challenges
           </p>
 

@@ -16,7 +16,7 @@ const CustomerReview = () => {
         </p>
 
         <div className="space-y-1">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center justify-center md:justify-start gap-2">
             <img src={reviewer} alt="reviewer" />
             <img src={reviewer} alt="reviewer" />
             <img src={reviewer} alt="reviewer" />
@@ -37,7 +37,7 @@ const CustomerReview = () => {
           positive experiences!
         </p>
 
-        <div className="flex items-center gap-2">
+        <div className="flex  items-center gap-2">
           <img src={reviewer} alt="reviewer" />
           <div className="leading-5 ">
             <h4 className="font-medium">john doe</h4>

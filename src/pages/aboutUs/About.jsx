@@ -90,19 +90,19 @@ const About = () => {
           <div className="bg-[#f4a261] p-4 rounded-md drop-shadow-sm h-max">
             <div className="my-6 pb-6 grid gap-3 grid-cols-2">
               <div className="text-center  py-6 px-2 rounded-md">
-                <p className="text-2xl font-bold text-zinc-800">1500+</p>
+                <p className="text-2xl font-bold text-zinc-800">150+</p>
                 <p className="text-zinc-800 font-medium">Project Delivered</p>
               </div>
               <div className="text-center  py-6 px-2 rounded-md">
-                <p className="text-2xl font-bold text-zinc-800">1500+</p>
+                <p className="text-2xl font-bold text-zinc-800">120+</p>
                 <p className="text-zinc-800 font-medium">Professional</p>
               </div>
               <div className="text-center  py-6 px-2 rounded-md">
-                <p className="text-2xl font-bold text-zinc-800">1500+</p>
+                <p className="text-2xl font-bold text-zinc-800">170+</p>
                 <p className="text-zinc-800 font-medium">Happy Client</p>
               </div>
               <div className="text-center  py-6 px-2 rounded-md">
-                <p className="text-2xl font-bold text-zinc-800">3y+</p>
+                <p className="text-2xl font-bold text-zinc-800">2y+</p>
                 <p className="text-zinc-800 font-medium">Experience</p>
               </div>
             </div>

@@ -7,44 +7,34 @@ import SectionTitle from "../shared/SectionTitle";
 const Marketing = () => {
   const navItems = [
     {
-      label: "Web Development",
+      label: "Digital Marketing      ",
       to: "#",
     },
     {
-      label: "Technical Support",
+      label: "          Social Media Marketing      ",
       to: "#",
     },
     {
-      label: "AWS/Azure",
+      label: " YouTube Marketing     ",
       to: "#",
-    },
-    {
-      label: "Consulting",
-      to: "#",
-    },
-    {
-      label: "Information Technology",
-      to: "#",
-    },
+    }
   ];
   return (
     <section className="my-container">
       <header className="items-center grid-cols-4 gap-10 py-8 space-y-4 lg:grid lg:space-y-0 lg:py-20">
         <div className="col-span-3 space-y-4">
-          <div className="w-max">
+          {/* <div className="w-max">
             <SectionTitle text={"our services"} number={"01"} />
-          </div>
-          <h3 className="text-3xl font-semibold leading-tight lg:text-5xl lg:w-3/4">
-            We Build Degital Marketing Solve Clients Business Challenges
+          </div> */}
+          <h3 className="text-3xl text-center md:text-left font-semibold leading-tight lg:text-5xl lg:w-3/4">
+          Empowering Brands with Comprehensive Digital Marketing Solutions
           </h3>
-          <p className="font-semibold">
-            Through True Rich Attended does no end it his mother since
-            favourable real had half every him case in packages enquire we up
-            ecstatic.
+          <p className="font-semibold text-center md:text-left">
+          Crafting Tailored Strategies, Driving Engagement, and Delivering Measurable Results for Sustainable Online Success
           </p>
-          <Button text="Request A Quote" />
+         <div className="flex justify-center md:justify-start"> <Button text="Request A Quote" /></div>
         </div>
-        <ul className="col-span-1 space-y-1 lg:space-y-4">
+        <ul className="col-span-1 space-y-1 lg:space-y-4 hidden md:block">
           {navItems.map((item) => (
             <li key={item.label} className="text-lg font-bold ">
               <Link to={item.to}>{item.label}</Link>
