@@ -36,89 +36,83 @@ const Navbar = () => {
   const toggleNav = () => {
     setShowNav((prev) => !prev);
   };
-  const navData = [
-    {
-      id: 1,
-      name: "home",
-      path: "/",
-    },
-    {
-      id: 2,
-      name: "services",
-      path: "/web-development",
-      submenu: [
-        {
-          id: 11,
-          name: "web development",
-          path: "web-development",
-        },
-        {
-          id: 22,
-          name: "graphics design",
-          path: "graphics-design",
-        },
-        {
-          id: 322,
-          name: "digital marketing",
-          path: "digital-marketing",
-        },
-        {
-          id: 44,
-          name: "seo",
-          path: "seo",
-        },
-      ],
-    },
-    {
-      id: 3,
-      name: "about us",
-      path: "about-us",
-    },
-    {
-      id: 4,
-      name: "contact us",
-      path: "contact-us",
-    },
-  ];
+
   return (
     <>
       <nav className="bg-navBg py-3 sticky top-0 left-0 w-full z-30">
-        <div
-          className="my-container flex justify-between items-center px-2"
-        >
+        <div className="my-container flex justify-between items-center px-2">
           <div>
             <img src={second} alt="" />
           </div>
           <div className="sm:flex items-center gap-3 hidden">
-            {navData.map((item) => (
-              <li
-                key={item.id}
-                className="list-none relative group uppercase text-zinc-300 font-semibold hover:text-white"
+            <li className="list-none relative group uppercase text-zinc-300 font-semibold hover:text-white">
+              <NavLink
+                to={"/"}
+                onClick={toggleNav}
+                className={({ isActive }) =>
+                  isActive ? "active dot" : "inActive"
+                }
               >
-                <NavLink
-                  to={item.path}
+                Home
+              </NavLink>
+            </li>
+            <li className="list-none relative group uppercase text-zinc-300 font-semibold hover:text-white cursor-pointer">
+              services
+              <div className="hidden group-hover:block absolute top-[25px] left-0 bg-white  rounded-md z-10 space-y-3  translate-y-3 transition-all opacity-0 group-hover:translate-y-0 group-hover:opacity-100 drop-shadow-md">
+                <Link
                   onClick={toggleNav}
-                  className={({ isActive }) =>
-                    isActive ? "active dot" : "inActive"
-                  }
+                  to="/seo"
+                  className="px-6 last:pb-6 first:pt-5 flex flex-col w-max text-zinc-500 font-medium capitalize hover:text-btnBg"
                 >
-                  {item.name}
-                </NavLink>
+                  seo
+                </Link>
+                <Link
+                  onClick={toggleNav}
+                  to="/web-development"
+                  className="px-6 last:pb-6 first:pt-5 flex flex-col w-max text-zinc-500 font-medium capitalize hover:text-btnBg"
+                >
+                  web development
+                </Link>
+                <Link
+                  onClick={toggleNav}
+                  to="/graphics-design"
+                  className="px-6 last:pb-6 first:pt-5 flex flex-col w-max text-zinc-500 font-medium capitalize hover:text-btnBg"
+                >
+                  graphics design
+                </Link>
+                <Link
+                  onClick={toggleNav}
+                  to="/digital-marketing"
+                  className="px-6 last:pb-6 first:pt-5 flex flex-col w-max text-zinc-500 font-medium capitalize hover:text-btnBg"
+                >
+                  digital marketing
+                </Link>
+              </div>
+            </li>
 
-                <div className="hidden group-hover:block absolute top-[25px] left-0 bg-white  rounded-md z-10 space-y-3  translate-y-3 transition-all opacity-0 group-hover:translate-y-0 group-hover:opacity-100 drop-shadow-md">
-                  {item?.submenu?.map((menu) => (
-                    <Link
-                      onClick={toggleNav}
-                      to={menu.path}
-                      key={menu.id}
-                      className="px-6 last:pb-6 first:pt-5 flex flex-col w-max text-zinc-500 font-medium capitalize hover:text-btnBg"
-                    >
-                      {menu.name}
-                    </Link>
-                  ))}
-                </div>
-              </li>
-            ))}
+            <li className="list-none relative group uppercase text-zinc-300 font-semibold hover:text-white">
+              <NavLink
+                to={"/about-us"}
+                onClick={toggleNav}
+                className={({ isActive }) =>
+                  isActive ? "active dot" : "inActive"
+                }
+              >
+                about us
+              </NavLink>
+            </li>
+
+            <li className="list-none relative group uppercase text-zinc-300 font-semibold hover:text-white">
+              <NavLink
+                to={"/contact-us"}
+                onClick={toggleNav}
+                className={({ isActive }) =>
+                  isActive ? "active dot" : "inActive"
+                }
+              >
+                contact us
+              </NavLink>
+            </li>
           </div>
 
           <p
@@ -144,33 +138,69 @@ const Navbar = () => {
           <MdClose className="p-1 font-semibold" />
         </span>
         <div className="pt-[5rem] space-y-4">
-          {navData.map((item) => (
-            <li
-              key={item.id}
-              className="list-none relative group w-max mx-auto"
+          <li className="list-none relative group w-max mx-auto">
+            <NavLink
+              onClick={toggleNav}
+              to={"/"}
+              className="uppercase text-zinc-100 font-semibold hover:text-white"
             >
-              <NavLink
-                onClick={toggleNav}
-                to={item.path}
-                className="uppercase text-white font-semibold hover:text-white"
-              >
-                {item.name}
-              </NavLink>
+              home
+            </NavLink>
+          </li>
 
-              <div className="absolute top-0 -right-[11rem] bg-navBg border border-zinc-700 rounded-md z-10 space-y-3  translate-y-3 transition-all opacity-0 group-hover:translate-y-0 group-hover:opacity-100 drop-shadow-md  ">
-                {item?.submenu?.map((menu) => (
-                  <Link
-                    to={menu.path}
-                    key={menu.id}
-                    onClick={toggleNav}
-                    className="text-sm px-6 last:pb-6 first:pt-5 flex flex-col w-max text-zinc-50 transition-all font-medium capitalize hover:text-btnBg "
-                  >
-                    {menu.name}
-                  </Link>
-                ))}
-              </div>
-            </li>
-          ))}
+          <li className="list-none relative group w-max mx-auto cursor-pointer text-zinc-50 font-semibold text-lg">
+            services
+            <div className="absolute top-3 -right-[8rem] bg-navBg border border-zinc-700 rounded-md z-10 space-y-3  translate-y-3 transition-all hidden group-hover:block drop-shadow-md py-4 px-2 ">
+              <Link
+                to={"/seo"}
+                onClick={toggleNav}
+                className="text-sm px-3 flex flex-col w-max text-zinc-50 transition-all font-medium capitalize hover:text-btnBg "
+              >
+                seo
+              </Link>
+              <Link
+                to={"/web-development"}
+                onClick={toggleNav}
+                className="text-sm px-3 flex flex-col w-max text-zinc-50 transition-all font-medium capitalize hover:text-btnBg "
+              >
+                web development
+              </Link>
+              <Link
+                to={"/graphics-design"}
+                onClick={toggleNav}
+                className="text-sm px-3 flex flex-col w-max text-zinc-50 transition-all font-medium capitalize hover:text-btnBg "
+              >
+                graphics design
+              </Link>
+              <Link
+                to={"/digital-marketing"}
+                onClick={toggleNav}
+                className="text-sm px-3 flex flex-col w-max text-zinc-50 transition-all font-medium capitalize hover:text-btnBg "
+              >
+                digital marketing
+              </Link>
+            </div>
+          </li>
+
+          <li className="list-none relative group w-max mx-auto">
+            <NavLink
+              onClick={toggleNav}
+              to={"/about-us"}
+              className="uppercase text-zinc-100 font-semibold hover:text-white"
+            >
+              about us
+            </NavLink>
+          </li>
+
+          <li className="list-none relative group w-max mx-auto">
+            <NavLink
+              onClick={toggleNav}
+              to={"/contact-us"}
+              className="uppercase text-zinc-100 font-semibold hover:text-white"
+            >
+              contact us
+            </NavLink>
+          </li>
         </div>
       </div>
     </>
