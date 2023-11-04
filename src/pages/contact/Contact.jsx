@@ -15,7 +15,7 @@ const Contact = () => {
         <div className="grid gap-[7rem] md:gap-3 md:grid-cols-[1fr,_2fr] bg-white px-6 border border-zinc-200 py-12  rounded-md relative">
           {/* left  */}
 
-          <div className="relative">
+          <div className="relative order-2 md:order-3">
             <h1 className="capitalize text-4xl font-medium text-zinc-700 text-center mb-12 ">
               Get in touch
             </h1>
@@ -55,7 +55,7 @@ const Contact = () => {
             </div>
           </div>
           {/* right  */}
-          <div>
+          <div className="order-1 md:order-4">
             <h1 className="mb-8 text-3xl text-zinc-700 font-semibold">
               Leave a message and we will contact you shortly.
             </h1>
@@ -68,21 +68,21 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder="Name"
-                  className="w-full border border-zinc-200 p-2 px rounded-md focus:outline-zinc-300 bg-rose-50/20"
+                  className="w-full border border-zinc-200 p-2 px rounded-md focus:outline-zinc-300 bg-teal-50/20"
                 />
               </div>
               <div>
                 <input
                   type="text"
                   placeholder="Email"
-                  className="w-full border border-zinc-200 p-2 px rounded-md focus:outline-zinc-300 bg-rose-50/20"
+                  className="w-full border border-zinc-200 p-2 px rounded-md focus:outline-zinc-300 bg-teal-50/20"
                 />
               </div>
               <div>
                 <input
                   type="text"
                   placeholder="Subject"
-                  className="w-full border border-zinc-200 p-2 px rounded-md focus:outline-zinc-300 bg-rose-50/20"
+                  className="w-full border border-zinc-200 p-2 px rounded-md focus:outline-zinc-300 bg-teal-50/20"
                 />
               </div>
               <div>
@@ -90,7 +90,7 @@ const Contact = () => {
                   name=""
                   id=""
                   rows="5"
-                  className="w-full border border-zinc-200 p-2 px rounded-md focus:outline-zinc-300 bg-rose-50/20"
+                  className="w-full border border-zinc-200 p-2 px rounded-md focus:outline-zinc-300 bg-teal-50/20"
                 ></textarea>
               </div>
 
